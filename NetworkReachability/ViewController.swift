@@ -10,11 +10,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let network: NetworkManager = NetworkManager.sharedInstance
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        checkForReachability()
     }
 
+    fileprivate func checkForReachability() {
+        offlineMode()
+        onlineMode()
+    }
 
+    fileprivate func onlineMode() {
+        NetworkManager.isReachable { _ in
+            self.showMainViewController()
+        }
+    }
+
+    fileprivate func offlineMode() {
+        NetworkManager.isUnreachable { _ in
+            self.showOfflineController()
+        }
+    }
+
+    fileprivate func showOfflineController() {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "OffLineViewController") as! OffLineViewController
+            vc.show(vc, sender: self)
+        }
+    }
+
+    fileprivate func showMainViewController() {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+            vc.show(vc, sender: self)
+        }
+    }
 }
 
