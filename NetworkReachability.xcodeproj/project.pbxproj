@@ -12,7 +12,7 @@
 		6054B2B121C5834F004810D2 /* OffLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6054B2B021C5834F004810D2 /* OffLineViewController.swift */; };
 		6054B2B321C5849D004810D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6054B2B221C5849D004810D2 /* MainViewController.swift */; };
 		6061F1F721C57A49002964BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061F1F621C57A49002964BA /* AppDelegate.swift */; };
-		6061F1F921C57A49002964BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061F1F821C57A49002964BA /* ViewController.swift */; };
+		6061F1F921C57A49002964BA /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6061F1F821C57A49002964BA /* LaunchViewController.swift */; };
 		6061F1FC21C57A49002964BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6061F1FA21C57A49002964BA /* Main.storyboard */; };
 		6061F1FE21C57A4B002964BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6061F1FD21C57A4B002964BA /* Assets.xcassets */; };
 		6061F20121C57A4B002964BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6061F1FF21C57A4B002964BA /* LaunchScreen.storyboard */; };
@@ -26,7 +26,7 @@
 		6054B2B221C5849D004810D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6061F1F321C57A49002964BA /* NetworkReachability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkReachability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6061F1F621C57A49002964BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6061F1F821C57A49002964BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6061F1F821C57A49002964BA /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		6061F1FB21C57A49002964BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6061F1FD21C57A4B002964BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6061F20021C57A4B002964BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			children = (
 				6061F1F621C57A49002964BA /* AppDelegate.swift */,
 				6054B2B221C5849D004810D2 /* MainViewController.swift */,
-				6061F1F821C57A49002964BA /* ViewController.swift */,
+				6061F1F821C57A49002964BA /* LaunchViewController.swift */,
 				6054B2B021C5834F004810D2 /* OffLineViewController.swift */,
 				6054B2AE21C57C2B004810D2 /* NetworkManager.swift */,
 				6061F1FA21C57A49002964BA /* Main.storyboard */,
@@ -197,12 +197,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkReachability/Pods-NetworkReachability-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +221,7 @@
 			files = (
 				6054B2B121C5834F004810D2 /* OffLineViewController.swift in Sources */,
 				6054B2AF21C57C2B004810D2 /* NetworkManager.swift in Sources */,
-				6061F1F921C57A49002964BA /* ViewController.swift in Sources */,
+				6061F1F921C57A49002964BA /* LaunchViewController.swift in Sources */,
 				6061F1F721C57A49002964BA /* AppDelegate.swift in Sources */,
 				6054B2B321C5849D004810D2 /* MainViewController.swift in Sources */,
 			);

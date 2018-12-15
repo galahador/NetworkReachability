@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LaunchViewController: UIViewController {
 
     let network: NetworkManager = NetworkManager.sharedInstance
 

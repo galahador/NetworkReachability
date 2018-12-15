@@ -8,5 +8,6 @@ target 'NetworkReachability' do
   # Pods for NetworkReachability
 
   pod 'ReachabilitySwift'
+  pod 'Alamofire'
 
 end
