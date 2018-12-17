@@ -9,16 +9,14 @@
 import UIKit
 
 class OffLineViewController: UIViewController {
-    
-    let network: NetworkManager = NetworkManager.sharedInstance
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForNetwork()
     }
     
     fileprivate func checkForNetwork() {
-        network.reachability.whenReachable = {_ in
+        NetworkManager.sharedInstance.reachability.whenReachable = {_ in
             self.showMainViewController()
         }
     }

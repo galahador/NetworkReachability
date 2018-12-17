@@ -11,10 +11,8 @@ import Reachability
 
 class NetworkManager: NSObject {
     var reachability: Reachability!
-
-    static let sharedInstance: NetworkManager = {
-        return NetworkManager()
-    }()
+    
+    static let sharedInstance = NetworkManager()
 
     override init() {
         super.init()

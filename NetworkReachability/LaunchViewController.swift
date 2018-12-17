@@ -10,8 +10,6 @@ import UIKit
 
 class LaunchViewController: UIViewController {
 
-    let network: NetworkManager = NetworkManager.sharedInstance
-
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForReachability()
